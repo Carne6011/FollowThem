@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="2220px"
+    android:layout_height="1080px"
+    android:background="@drawable/grid2">
+
+
+    <ImageView
+        android:id="@+id/MinerHat"
+        android:layout_width="75px"
+        android:layout_height="75px"
+
+        android:layout_marginStart="620dp"
+        android:layout_marginLeft="@dimen/x_cord"
+        android:layout_marginTop="@dimen/y_cord"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/minerhat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

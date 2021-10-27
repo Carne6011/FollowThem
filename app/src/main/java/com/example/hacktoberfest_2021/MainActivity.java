@@ -19,8 +19,13 @@ import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
 
-    int x_cord = 606; //606
-    int y_cord = 65;//65
+    int x_s = 605; //graphical value
+    int y_s = 400;
+
+
+    int[][] map = new int[10][28];
+    int mx_s = 8; //coordinate value
+    int my_s = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
             hideSystemUI();
         }
         final ImageView imageView = (ImageView)findViewById(R.id.MinerHat);
-        imageView.setX(x_cord);
-        imageView.setY(y_cord);
+        imageView.setX(x_s);
+        imageView.setY(y_s);
         imageView.invalidate();
     }
 
@@ -56,4 +61,26 @@ public class MainActivity extends AppCompatActivity {
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-    }}
+    }
+
+    public void ArrowUp(View view) {
+
+            my_s = my_s + 1;
+            y_s = y_s - 85;
+    }
+    public void ArrowDown(View view) {
+
+            my_s = my_s - 1;
+            y_s = y_s + 85;
+         //   DisplayStudent();
+    }
+    public void ArrowLeft(View view) {
+            mx_s = mx_s - 1;
+            x_s = x_s - 85;
+    }
+    public void ArrowRight(View view) {
+            mx_s = mx_s + 1;
+            x_s = x_s + 85;
+
+    }
+}

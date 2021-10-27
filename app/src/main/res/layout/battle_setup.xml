@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grid2">
+
+    <ImageView
+        android:id="@+id/Student"
+        android:layout_width="75px"
+        android:layout_height="75px"
+        android:layout_marginStart="605px"
+        android:layout_marginTop="400px"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:srcCompat="@drawable/minerhat" /> //student
+
+    <ImageButton
+        android:id="@+id/AUp"
+        android:layout_width="532dp"
+        android:layout_height="537dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="ArrowUp"
+        android:scaleX=".1"
+        android:scaleY=".1"
+        android:src="@drawable/arrowu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
+
+    <ImageButton
+        android:id="@+id/ALeft"
+        android:layout_width="532dp"
+        android:layout_height="537dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="680dp"
+        android:onClick="ArrowLeft"
+        android:rotation="-90"
+        android:scaleX=".1"
+        android:scaleY=".1"
+        android:src="@drawable/arrowu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <ImageButton
+        android:id="@+id/ARight"
+        android:layout_width="532dp"
+        android:layout_height="537dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="9dp"
+        android:onClick="ArrowRight"
+        android:rotation="+90"
+        android:scaleX=".1"
+        android:scaleY=".1"
+        android:src="@drawable/arrowu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.782" />
+
+    <ImageButton
+        android:id="@+id/ADown"
+        android:layout_width="532dp"
+        android:layout_height="537dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="800dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="ArrowDown"
+        android:rotation="180"
+        android:scaleX=".1"
+        android:scaleY=".1"
+        android:src="@drawable/arrowu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

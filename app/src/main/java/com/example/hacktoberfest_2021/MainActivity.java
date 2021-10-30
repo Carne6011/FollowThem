@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_true);
+        setContentView(R.layout.battle_setup);
+        setupmap();
+        startlocations();
     }
 
     @Override
@@ -61,6 +63,64 @@ public class MainActivity extends AppCompatActivity {
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+    }
+
+    public void setupmap()//sets up the playing field
+    {
+        for(int i = 1; i <3; i++)//set out of bounds
+        {
+            for(int j =1; j<7; j++)
+            {
+                map[i][j] = 5;
+            }
+        }
+
+        for(int l = 0; l <28; l++)//set out of bounds
+        {
+            map[0][l] = 5;
+            map[9][l] = 5;
+        }
+
+        for(int k =0; k<10; k++)
+        {
+            map[k][0] = 5;
+            map[k][27] = 5;
+        }
+    }
+
+    public void startlocations()//sets the starting locations for the enemy and student
+    {
+        map[my_s][mx_s] = 1; //student location
+
+        map[my_s][mx_s+1] = 2; //student range
+        map[my_s][mx_s-1] = 2;
+        map[my_s+1][mx_s] = 2;
+        map[my_s-1][mx_s] = 2;
+    }
+
+    public void DisplayStudent()
+    {
+
+        int dispx;
+        int dispy ;
+        for(int l = 0; l <28; l++)//set out of bounds
+        {
+            for(int k =0; k<10; k++)
+            {
+
+                if (map[k][l] == 1)
+                {
+                    dispx= (l * 85)-75;
+                    dispy= 740-(k* 85);
+                    final ImageView StudentV = (ImageView) findViewById(R.id.MinerHat);
+                    StudentV.setX(dispx);
+                    StudentV.setY(dispy);
+                    StudentV.invalidate();
+
+                }
+            }
+        }
+
     }
 
     public void ArrowUp(View view) {

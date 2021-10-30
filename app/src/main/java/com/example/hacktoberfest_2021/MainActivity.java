@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import java.lang.reflect.Field;
+import java.util.Random;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     int[][] map = new int[10][28];
     int mx_s = 8; //coordinate value
     int my_s = 4;
+
+    int[][] boulderlocation = new int[5][2];
+    int randomx;
+    int randomy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +103,73 @@ public class MainActivity extends AppCompatActivity {
         map[my_s-1][mx_s] = 2;
     }
 
+    public void BoulderSetUp()
+    {
+        for (int i=0;i<5;i++)
+        {
+            randomx = new Random().nextInt(26) + 1;
+            randomy = new Random().nextInt(7) + 1;
+
+            if ((map[randomy][randomx]==0)&&(randomy != 4))
+            {
+                boulderlocation[i][0]= randomx;
+                boulderlocation[i][1]= randomy;
+            }
+            else
+            {
+                i=i-1;
+            }
+        }
+        DisplayBoulder();
+    }
+    public void DisplayBoulder()
+    {
+        final ImageView B1 = (ImageView)findViewById(R.id.Boulder1);
+        B1.setX((boulderlocation[0][0]-1)*85);
+        B1.setY(595-((boulderlocation[0][1]-1)*85));
+        B1.invalidate();
+
+        final ImageView B2 = (ImageView)findViewById(R.id.Boulder2);
+        B2.setX((boulderlocation[1][0]-1)*85);
+        B2.setY(595-((boulderlocation[1][1]-1)*85));
+        B2.invalidate();
+
+        final ImageView B3 = (ImageView)findViewById(R.id.Boulder3);
+        B3.setX((boulderlocation[2][0]-1)*85);
+        B3.setY(595-((boulderlocation[2][1]-1)*85));
+        B3.invalidate();
+
+        final ImageView B4 = (ImageView)findViewById(R.id.Boulder4);
+        B4.setX((boulderlocation[3][0]-1)*85);
+        B4.setY(595-((boulderlocation[3][1]-1)*85));
+        B4.invalidate();
+
+        final ImageView B5 = (ImageView)findViewById(R.id.Boulder5);
+        B5.setX((boulderlocation[4][0]-1)*85);
+        B5.setY(595-((boulderlocation[4][1]-1)*85));
+        B5.invalidate();
+    }
+    public void UpdateGrid(){
+        for(int i = 0; i <10; i++)//clear grid
+        {
+            for(int j =0; j<28; j++)
+            {
+                map[i][j] = 0;
+            }
+        }
+
+
+        map[my_s][mx_s+1] = 2; //student range
+        map[my_s][mx_s-1] = 2;
+        map[my_s+1][mx_s] = 2;
+        map[my_s-1][mx_s] = 2;
+
+
+        map[my_s][mx_s] = 1; //student location
+        setupmap();
+
+    }
+
     public void DisplayStudent()
     {
 
@@ -127,20 +199,23 @@ public class MainActivity extends AppCompatActivity {
 
             my_s = my_s + 1;
             y_s = y_s - 85;
+        DisplayStudent();
     }
     public void ArrowDown(View view) {
 
             my_s = my_s - 1;
             y_s = y_s + 85;
-         //   DisplayStudent();
+           DisplayStudent();
     }
     public void ArrowLeft(View view) {
             mx_s = mx_s - 1;
             x_s = x_s - 85;
+        DisplayStudent();
     }
     public void ArrowRight(View view) {
             mx_s = mx_s + 1;
             x_s = x_s + 85;
+        DisplayStudent();
 
     }
 }

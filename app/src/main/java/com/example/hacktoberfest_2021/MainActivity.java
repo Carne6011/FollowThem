@@ -182,8 +182,8 @@ public class MainActivity extends AppCompatActivity {
     public void DisplayStudent()
     {
 
-        int dispx;
-        int dispy ;
+        int dispx =0;
+        int dispy =0;
         for(int l = 0; l <28; l++)//set out of bounds
         {
             for(int k =0; k<10; k++)
@@ -193,7 +193,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     dispx= (l * 85)-75;
                     dispy= 740-(k* 85);
-                    final ImageView StudentV = (ImageView) findViewById(R.id.MinerHat);
+                    final ImageView StudentV;
+                    StudentV = (ImageView) findViewById(R.id.MinerHat);
                     StudentV.setX(dispx);
                     StudentV.setY(dispy);
                     StudentV.invalidate();

@@ -26,7 +26,7 @@
         android:id="@+id/AUp"
         android:layout_width="532dp"
         android:layout_height="537dp"
-        android:layout_marginStart="1dp"
+        android:layout_marginStart="6dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="600dp"
         android:onClick="ArrowUp"
@@ -35,17 +35,17 @@
         android:src="@drawable/arrowu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52"
+        app:layout_constraintVertical_bias="0.53"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/ALeft"
         android:layout_width="532dp"
         android:layout_height="537dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="102dp"
         android:layout_marginEnd="609dp"
         android:onClick="ArrowLeft"
         android:rotation="-90"
@@ -54,10 +54,10 @@
         android:src="@drawable/arrowu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintHorizontal_bias="0.71"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24000001"
+        app:layout_constraintVertical_bias="0.29000002"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -73,10 +73,10 @@
         android:src="@drawable/arrowu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
+        app:layout_constraintVertical_bias="0.29000002"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -84,7 +84,7 @@
         android:layout_width="532dp"
         android:layout_height="537dp"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="600dp"
+        android:layout_marginEnd="604dp"
         android:onClick="ArrowDown"
         android:rotation="180"
         android:scaleX=".1"
@@ -92,10 +92,10 @@
         android:src="@drawable/arrowu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26999998"
+        app:layout_constraintVertical_bias="0.31"
         tools:ignore="SpeakableTextPresentCheck" />
 
 
